@@ -6,3 +6,5 @@ node_modules/
 # Reference / source files kept locally only
 lightning.png
 thuner logo.jpeg
+/*.jpeg
+/*.png

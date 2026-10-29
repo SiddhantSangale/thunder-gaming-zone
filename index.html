@@ -7,7 +7,7 @@
 <meta name="description" content="Thunder Gaming Zone - Dombivli East's 4.9★ gaming zone. PS5 lounge, RTX 4060 gaming PCs, racing wheel simulator, VR & MetaBat. Book your slot now.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Press+Start+2P&family=Saira:wght@600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
@@ -20,7 +20,7 @@
   <div class="intro-stage">
     <span class="intro-word intro-thu" id="introThu"><span class="intro-metal">THU</span></span>
     <span class="intro-gap" id="introGap">
-      <svg class="intro-bolt" viewBox="0 0 60 160"><path d="M40 2 L8 94 L29 89 L17 158 L53 60 L32 66 Z"/></svg>
+      <svg class="intro-bolt" viewBox="0 0 60 160"><path d="M40 2 L8 94 L29 89 L17 158 L53 60 L32 66 Z" transform="matrix(-1 0 0 1 60 0)"/></svg>
     </span>
     <span class="intro-word intro-der" id="introDer"><span class="intro-metal">DER</span><small>THE GAMING ZONE</small></span>
   </div>
@@ -34,7 +34,8 @@
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#stations">Experiences</a>
-      <a href="#offers">Offers</a>
+      <a href="#events">Events</a>
+      <a href="#parties">Parties</a>
       <a href="#snacks">Snacks</a>
       <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
@@ -65,76 +66,21 @@
     <svg class="deco-btn deco-bolt b2" viewBox="0 0 40 40"><path d="M23 4 L10 22 H19 L16 36 L30 16 H21 Z" fill="none" stroke="#ffd23f" stroke-width="2.6" stroke-linejoin="round"/></svg>
   </div>
   <div class="container hero-content">
-    <p class="tagline">Feel the <span class="bolt">⚡</span> Thunder.<br><em>Own Every Game.</em></p>
+    <p class="tagline">Feel the Thunder.<br><em>Own Every Game.</em></p>
     <p class="hero-sub">PS5 · RTX PCs · Racing Sim · VR &amp; MetaBat — Dombivli East</p>
     <div class="hero-actions">
       <a href="#stations" class="btn btn-outline btn-lg">Explore Setups</a>
       <a href="booking.html" class="btn btn-primary btn-lg">Book Your Slot →</a>
-      <button type="button" id="eventsBtn" class="btn btn-outline btn-lg">Check Events</button>
+      <a href="#events" class="btn btn-outline btn-lg">Check Events</a>
     </div>
   </div>
   <div class="scroll-cue">SCROLL</div>
 </section>
 
-<!-- EVENTS MODAL -->
-<div class="modal-overlay" id="eventsModal">
-  <div class="modal-box">
-    <div class="modal-head">
-      <h3>Upcoming Events</h3>
-      <button type="button" id="eventsClose" class="modal-close" aria-label="Close">✕</button>
-    </div>
-    <div class="modal-body">
-      <ul class="event-list">
-        <li class="event-item">
-          <div class="event-date"><span class="ev-day">THU</span><span class="ev-mon">WEEKLY</span></div>
-          <div class="event-info">
-            <span class="event-tag">⚡ Weekly Deal</span>
-            <h4>Fun Thursday</h4>
-            <p>9:00 AM – 10:00 PM · PC ₹50, PS5 squads ₹45/person, Racing Sim &amp; Nintendo ₹90.</p>
-          </div>
-        </li>
-        <li class="event-item">
-          <div class="event-date"><span class="ev-day">8</span><span class="ev-mon">NOV</span></div>
-          <div class="event-info">
-            <span class="event-tag">⚽ Tournament</span>
-            <h4>FC 27 Duo Cup</h4>
-            <p>4:00 PM · Solo &amp; duo entries on PS5. Register via the link in our Instagram bio.</p>
-          </div>
-        </li>
-        <li class="event-item">
-          <div class="event-date"><span class="ev-day">15</span><span class="ev-mon">NOV</span></div>
-          <div class="event-info">
-            <span class="event-tag">🏎️ Time Trial</span>
-            <h4>Wheel Sim Hot Lap Challenge</h4>
-            <p>All day · Set the fastest lap on our Logitech wheel rigs — top 3 win free sim hours.</p>
-          </div>
-        </li>
-        <li class="event-item">
-          <div class="event-date"><span class="ev-day">22</span><span class="ev-mon">NOV</span></div>
-          <div class="event-info">
-            <span class="event-tag">🥊 Tournament</span>
-            <h4>P vs P Battle: Tekken Night</h4>
-            <p>6:00 PM · Single-elimination fighting bracket on the big screen. Spectators welcome.</p>
-          </div>
-        </li>
-        <li class="event-item">
-          <div class="event-date"><span class="ev-day">29</span><span class="ev-mon">NOV</span></div>
-          <div class="event-info">
-            <span class="event-tag">🏏 Special</span>
-            <h4>MetaBat Super Over</h4>
-            <p>5:00 PM · VR cricket six-hitting contest. Biggest hitter takes the trophy.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <p class="modal-note">📌 Sample events shown for preview — connect Thunder's own calendar or Instagram posts here to keep this list live.</p>
-  </div>
-</div>
-
 <!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-track">
-    <span>PS5 LOUNGE</span><span>⚡</span><span>RTX 4060 GAMING PCs</span><span>⚡</span><span>RACING WHEEL SIMULATOR</span><span>⚡</span><span>VR &amp; METABAT</span><span>⚡</span><span>FUN THURSDAY DEALS</span><span>⚡</span><span>CHIPS &amp; COLD DRINKS</span><span>⚡</span><span>PS5 LOUNGE</span><span>⚡</span><span>RTX 4060 GAMING PCs</span><span>⚡</span><span>RACING WHEEL SIMULATOR</span><span>⚡</span><span>VR &amp; METABAT</span><span>⚡</span><span>FUN THURSDAY DEALS</span><span>⚡</span><span>CHIPS &amp; COLD DRINKS</span><span>⚡</span>
+    <span>PS5 LOUNGE</span><span>⚡</span><span>RTX 4060 GAMING PCs</span><span>⚡</span><span>RACING WHEEL SIMULATOR</span><span>⚡</span><span>VR &amp; METABAT</span><span>⚡</span><span>TOURNAMENTS &amp; EVENTS</span><span>⚡</span><span>CHIPS &amp; COLD DRINKS</span><span>⚡</span><span>PS5 LOUNGE</span><span>⚡</span><span>RTX 4060 GAMING PCs</span><span>⚡</span><span>RACING WHEEL SIMULATOR</span><span>⚡</span><span>VR &amp; METABAT</span><span>⚡</span><span>TOURNAMENTS &amp; EVENTS</span><span>⚡</span><span>CHIPS &amp; COLD DRINKS</span><span>⚡</span>
   </div>
 </div>
 
@@ -157,67 +103,39 @@
         <span class="tag">Duo · Trio · Squad rates</span>
       </div>
       <div class="station-card station-card--yellow">
-        <div class="station-img"><img src="assets/img/maps/pcrow.jpg" alt="Row of RTX 4060 gaming PCs with RGB lighting"></div>
+        <div class="station-img"><img src="assets/img/photos/pc.jpg" alt="Gamer with headset on the RTX 4060 PC row"></div>
         <h3>RTX 4060 Gaming PCs</h3>
         <p>High-refresh monitors and RTX rigs ready for Valorant, CS2, GTA V, PUBG &amp; more.</p>
         <div class="rate-simple">From ₹<strong>50</strong> / hour</div>
         <span class="tag">Single player rate</span>
       </div>
       <div class="station-card station-card--red">
-        <div class="station-img"><img src="assets/img/maps/wheelsetup.jpg" alt="Logitech racing wheel simulator rig with bucket seat"></div>
+        <div class="station-img"><img src="assets/img/photos/racing-sim.jpg" alt="Racing wheel simulator rig with bucket seat and game posters"></div>
         <h3>Racing Wheel Simulator</h3>
         <p>Logitech wheel, pedals &amp; a proper racing seat. Feel every corner in Forza &amp; F1.</p>
         <div class="rate-simple">From ₹<strong>90</strong> / hour</div>
         <span class="tag">Fun Thursday rate</span>
       </div>
       <div class="station-card station-card--purple">
-        <div class="station-img"><img src="assets/img/maps/neonsign.jpg" alt="PlayStation neon symbols glowing on the wall"></div>
+        <div class="station-img"><img src="assets/img/photos/vr.jpg" alt="VR headset and controllers ready to play"></div>
         <h3>VR Gaming</h3>
         <p>Step inside the game — immersive virtual reality titles for first-timers and pros.</p>
         <div class="rate-simple">From ₹<strong>150</strong> / session</div>
         <span class="tag">VR &amp; MetaBat combo</span>
       </div>
       <div class="station-card station-card--green">
-        <div class="station-img"><img src="assets/img/maps/simrig.jpg" alt="Gaming setup with posters and sim rig at Thunder Gaming Zone"></div>
+        <div class="station-img"><img src="assets/img/photos/metabat.jpg" alt="Player swinging a bat in the MetaBat VR cricket game"></div>
         <h3>MetaBat Cricket 🏏</h3>
         <p>Swing a real bat, smash virtual sixes. The crowd favourite for birthdays &amp; groups.</p>
         <div class="rate-simple">From ₹<strong>150</strong> / session</div>
         <span class="tag">Great for groups</span>
       </div>
       <div class="station-card station-card--pink">
-        <div class="station-img"><img src="assets/img/maps/entrance.jpg" alt="Thunder Gaming Zone entrance listing Nintendo Switch, wheel simulator racing and gaming PCs"></div>
+        <div class="station-img"><img src="assets/img/photos/nintendo.jpg" alt="Nintendo Switch with neon Joy-Cons"></div>
         <h3>Nintendo Switch</h3>
         <p>Mario Kart, Smash &amp; party games — pass the Joy-Cons and settle it with friends.</p>
         <div class="rate-simple">From ₹<strong>90</strong> / hour</div>
         <span class="tag">Party favourite</span>
-      </div>
-    </div>
-
-    <!-- OFFERS -->
-    <div class="deals-row" id="offers">
-      <div class="happy-hour">
-        <div class="hh-text">
-          <span class="eyebrow">⚡ EVERY THURSDAY</span>
-          <h3>Fun Thursday Rates</h3>
-          <p>Flat per-person prices all day, 9 AM to 10 PM — just walk in and play.</p>
-          <div class="hh-rates">
-            <div class="hh-slot"><span class="hh-time">Gaming PC</span><span class="hh-price">₹50<small>/person</small></span></div>
-            <div class="hh-slot"><span class="hh-time">PS5 Duo · Trio · Squad</span><span class="hh-price">₹45<small>/person</small></span></div>
-            <div class="hh-slot"><span class="hh-time">Racing Sim</span><span class="hh-price">₹90<small>/person</small></span></div>
-            <div class="hh-slot late"><span class="hh-time">Nintendo</span><span class="hh-price">₹90<small>/person</small></span></div>
-          </div>
-        </div>
-        <a href="https://www.instagram.com/thunder_gamingcafe/" target="_blank" rel="noopener" class="btn btn-outline">DM to Book →</a>
-      </div>
-
-      <div class="offer-poster">
-        <img src="assets/img/ig/fc27.jpg" alt="Thunder Gaming Cafe poster: FC 27 now available on PS5">
-        <div class="op-text">
-          <span class="mo-eyebrow">🆕 NEW ARRIVAL</span>
-          <h3 class="mo-title">FC 27 <em>is live</em></h3>
-          <p>The wait is over — FC 27 is now on our PS5s. New season, new leagues, same Thunder vibe.</p>
-          <a href="booking.html" class="btn btn-primary">Book a PS5 →</a>
-        </div>
       </div>
     </div>
   </div>
@@ -228,35 +146,141 @@
   <div class="container container-bleed">
     <span class="eyebrow center">GAME LIBRARY</span>
     <h2 class="center">Sit down &amp; play</h2>
-    <p class="section-sub center">A few of the titles ready to go across our PS5s and RTX rigs.</p>
+    <p class="section-sub center">A peek at the titles ready to go across our PS5s, RTX rigs and racing sims.</p>
   </div>
   <div class="game-scroll">
-    <div class="game-scroll-track" id="gameTrack">
-      <div class="game-card"><img src="assets/img/games/fc24.jpg" alt="EA Sports FC cover art"><div class="game-overlay"><span class="go-name">EA Sports FC</span><span class="go-genre">SPORTS</span></div></div>
-      <div class="game-card"><img src="assets/img/games/gtav.jpg" alt="Grand Theft Auto V cover art"><div class="game-overlay"><span class="go-name">Grand Theft Auto V</span><span class="go-genre">ACTION</span></div></div>
-      <div class="game-card"><img src="assets/img/games/mk1.jpg" alt="Mortal Kombat 1 cover art"><div class="game-overlay"><span class="go-name">Mortal Kombat 1</span><span class="go-genre">FIGHTING</span></div></div>
-      <div class="game-card"><img src="assets/img/games/tekken8.jpg" alt="Tekken 8 cover art"><div class="game-overlay"><span class="go-name">Tekken 8</span><span class="go-genre">FIGHTING</span></div></div>
-      <div class="game-card"><img src="assets/img/games/cs2.jpg" alt="Counter-Strike 2 cover art"><div class="game-overlay"><span class="go-name">Counter-Strike 2</span><span class="go-genre">FPS</span></div></div>
-      <div class="game-card"><img src="assets/img/games/spiderman.jpg" alt="Spider-Man Remastered cover art"><div class="game-overlay"><span class="go-name">Spider-Man Remastered</span><span class="go-genre">ACTION</span></div></div>
-      <div class="game-card"><img src="assets/img/games/pubg.jpg" alt="PUBG Battlegrounds cover art"><div class="game-overlay"><span class="go-name">PUBG: Battlegrounds</span><span class="go-genre">BATTLE ROYALE</span></div></div>
-      <div class="game-card"><img src="assets/img/games/godofwar.jpg" alt="God of War cover art"><div class="game-overlay"><span class="go-name">God of War</span><span class="go-genre">ACTION</span></div></div>
-      <div class="game-card"><img src="assets/img/games/rocketleague.jpg" alt="Rocket League cover art"><div class="game-overlay"><span class="go-name">Rocket League</span><span class="go-genre">SPORTS</span></div></div>
-      <div class="game-card"><img src="assets/img/games/sf6.jpg" alt="Street Fighter 6 cover art"><div class="game-overlay"><span class="go-name">Street Fighter 6</span><span class="go-genre">FIGHTING</span></div></div>
-      <div class="game-card"><img src="assets/img/games/apex.jpg" alt="Apex Legends cover art"><div class="game-overlay"><span class="go-name">Apex Legends</span><span class="go-genre">BATTLE ROYALE</span></div></div>
-      <div class="game-card"><img src="assets/img/games/cyberpunk.jpg" alt="Cyberpunk 2077 cover art"><div class="game-overlay"><span class="go-name">Cyberpunk 2077</span><span class="go-genre">RPG</span></div></div>
+    <div class="game-scroll-track">
+      <div class="game-card"><img src="assets/img/games/fc25.jpg" alt="EA Sports FC 25 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">EA Sports FC 25</span><span class="go-genre">SPORTS</span></div></div>
+      <div class="game-card"><img src="assets/img/games/gtav.jpg" alt="Grand Theft Auto V cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Grand Theft Auto V</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card"><img src="assets/img/games/mk11.jpg" alt="Mortal Kombat 11 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Mortal Kombat 11</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card"><img src="assets/img/games/tekken8.jpg" alt="Tekken 8 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Tekken 8</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card"><img src="assets/img/games/cs2.jpg" alt="Counter-Strike 2 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Counter-Strike 2</span><span class="go-genre">FPS</span></div></div>
+      <div class="game-card"><img src="assets/img/games/forza5.jpg" alt="Forza Horizon 5 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Forza Horizon 5</span><span class="go-genre">RACING</span></div></div>
+      <div class="game-card"><img src="assets/img/games/wwe2k24.jpg" alt="WWE 2K24 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">WWE 2K24</span><span class="go-genre">SPORTS</span></div></div>
+      <div class="game-card"><img src="assets/img/games/spiderman.jpg" alt="Spider-Man Remastered cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Spider-Man Remastered</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card"><img src="assets/img/games/rdr2.jpg" alt="Red Dead Redemption 2 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Red Dead Redemption 2</span><span class="go-genre">ADVENTURE</span></div></div>
+      <div class="game-card"><img src="assets/img/games/pubg.jpg" alt="PUBG: Battlegrounds cover art" loading="lazy"><div class="game-overlay"><span class="go-name">PUBG: Battlegrounds</span><span class="go-genre">BATTLE ROYALE</span></div></div>
+      <div class="game-card"><img src="assets/img/games/cod.jpg" alt="Call of Duty cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Call of Duty</span><span class="go-genre">FPS</span></div></div>
+      <div class="game-card"><img src="assets/img/games/f1-24.jpg" alt="F1 24 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">F1 24</span><span class="go-genre">RACING</span></div></div>
+      <div class="game-card"><img src="assets/img/games/godofwar.jpg" alt="God of War cover art" loading="lazy"><div class="game-overlay"><span class="go-name">God of War</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card"><img src="assets/img/games/apex.jpg" alt="Apex Legends cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Apex Legends</span><span class="go-genre">BATTLE ROYALE</span></div></div>
+      <div class="game-card"><img src="assets/img/games/rocketleague.jpg" alt="Rocket League cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Rocket League</span><span class="go-genre">SPORTS</span></div></div>
       <!-- duplicate set for seamless loop -->
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/fc24.jpg" alt=""><div class="game-overlay"><span class="go-name">EA Sports FC</span><span class="go-genre">SPORTS</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/gtav.jpg" alt=""><div class="game-overlay"><span class="go-name">Grand Theft Auto V</span><span class="go-genre">ACTION</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/mk1.jpg" alt=""><div class="game-overlay"><span class="go-name">Mortal Kombat 1</span><span class="go-genre">FIGHTING</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/tekken8.jpg" alt=""><div class="game-overlay"><span class="go-name">Tekken 8</span><span class="go-genre">FIGHTING</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/cs2.jpg" alt=""><div class="game-overlay"><span class="go-name">Counter-Strike 2</span><span class="go-genre">FPS</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/spiderman.jpg" alt=""><div class="game-overlay"><span class="go-name">Spider-Man Remastered</span><span class="go-genre">ACTION</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/pubg.jpg" alt=""><div class="game-overlay"><span class="go-name">PUBG: Battlegrounds</span><span class="go-genre">BATTLE ROYALE</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/godofwar.jpg" alt=""><div class="game-overlay"><span class="go-name">God of War</span><span class="go-genre">ACTION</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/rocketleague.jpg" alt=""><div class="game-overlay"><span class="go-name">Rocket League</span><span class="go-genre">SPORTS</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/sf6.jpg" alt=""><div class="game-overlay"><span class="go-name">Street Fighter 6</span><span class="go-genre">FIGHTING</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/apex.jpg" alt=""><div class="game-overlay"><span class="go-name">Apex Legends</span><span class="go-genre">BATTLE ROYALE</span></div></div>
-      <div class="game-card" aria-hidden="true"><img src="assets/img/games/cyberpunk.jpg" alt=""><div class="game-overlay"><span class="go-name">Cyberpunk 2077</span><span class="go-genre">RPG</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/fc25.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">EA Sports FC 25</span><span class="go-genre">SPORTS</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/gtav.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Grand Theft Auto V</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/mk11.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Mortal Kombat 11</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/tekken8.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Tekken 8</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/cs2.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Counter-Strike 2</span><span class="go-genre">FPS</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/forza5.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Forza Horizon 5</span><span class="go-genre">RACING</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/wwe2k24.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">WWE 2K24</span><span class="go-genre">SPORTS</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/spiderman.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Spider-Man Remastered</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/rdr2.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Red Dead Redemption 2</span><span class="go-genre">ADVENTURE</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/pubg.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">PUBG: Battlegrounds</span><span class="go-genre">BATTLE ROYALE</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/cod.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Call of Duty</span><span class="go-genre">FPS</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/f1-24.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">F1 24</span><span class="go-genre">RACING</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/godofwar.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">God of War</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/apex.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Apex Legends</span><span class="go-genre">BATTLE ROYALE</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/rocketleague.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Rocket League</span><span class="go-genre">SPORTS</span></div></div>
+    </div>
+  </div>
+  <div class="game-scroll">
+    <div class="game-scroll-track game-scroll-track--reverse">
+      <div class="game-card"><img src="assets/img/games/re4.jpg" alt="Resident Evil 4 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Resident Evil 4</span><span class="go-genre">HORROR</span></div></div>
+      <div class="game-card"><img src="assets/img/games/assetto.jpg" alt="Assetto Corsa cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Assetto Corsa</span><span class="go-genre">RACING SIM</span></div></div>
+      <div class="game-card"><img src="assets/img/games/hogwarts.jpg" alt="Hogwarts Legacy cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Hogwarts Legacy</span><span class="go-genre">RPG</span></div></div>
+      <div class="game-card"><img src="assets/img/games/mk1.jpg" alt="Mortal Kombat 1 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Mortal Kombat 1</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card"><img src="assets/img/games/wukong.jpg" alt="Black Myth: Wukong cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Black Myth: Wukong</span><span class="go-genre">ACTION RPG</span></div></div>
+      <div class="game-card"><img src="assets/img/games/nfs-hp.jpg" alt="Need for Speed: Hot Pursuit cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Need for Speed: Hot Pursuit</span><span class="go-genre">RACING</span></div></div>
+      <div class="game-card"><img src="assets/img/games/ghost.jpg" alt="Ghost of Tsushima cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Ghost of Tsushima</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card"><img src="assets/img/games/sf6.jpg" alt="Street Fighter 6 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Street Fighter 6</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card"><img src="assets/img/games/tlou.jpg" alt="The Last of Us Part I cover art" loading="lazy"><div class="game-overlay"><span class="go-name">The Last of Us Part I</span><span class="go-genre">ADVENTURE</span></div></div>
+      <div class="game-card"><img src="assets/img/games/ets2.jpg" alt="Euro Truck Simulator 2 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Euro Truck Simulator 2</span><span class="go-genre">SIMULATION</span></div></div>
+      <div class="game-card"><img src="assets/img/games/ittakestwo.jpg" alt="It Takes Two cover art" loading="lazy"><div class="game-overlay"><span class="go-name">It Takes Two</span><span class="go-genre">CO-OP</span></div></div>
+      <div class="game-card"><img src="assets/img/games/cyberpunk.jpg" alt="Cyberpunk 2077 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Cyberpunk 2077</span><span class="go-genre">RPG</span></div></div>
+      <div class="game-card"><img src="assets/img/games/eldenring.jpg" alt="Elden Ring cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Elden Ring</span><span class="go-genre">RPG</span></div></div>
+      <div class="game-card"><img src="assets/img/games/dota2.jpg" alt="Dota 2 cover art" loading="lazy"><div class="game-overlay"><span class="go-name">Dota 2</span><span class="go-genre">MOBA</span></div></div>
+      <!-- duplicate set for seamless loop -->
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/re4.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Resident Evil 4</span><span class="go-genre">HORROR</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/assetto.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Assetto Corsa</span><span class="go-genre">RACING SIM</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/hogwarts.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Hogwarts Legacy</span><span class="go-genre">RPG</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/mk1.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Mortal Kombat 1</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/wukong.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Black Myth: Wukong</span><span class="go-genre">ACTION RPG</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/nfs-hp.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Need for Speed: Hot Pursuit</span><span class="go-genre">RACING</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/ghost.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Ghost of Tsushima</span><span class="go-genre">ACTION</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/sf6.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Street Fighter 6</span><span class="go-genre">FIGHTING</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/tlou.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">The Last of Us Part I</span><span class="go-genre">ADVENTURE</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/ets2.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Euro Truck Simulator 2</span><span class="go-genre">SIMULATION</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/ittakestwo.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">It Takes Two</span><span class="go-genre">CO-OP</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/cyberpunk.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Cyberpunk 2077</span><span class="go-genre">RPG</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/eldenring.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Elden Ring</span><span class="go-genre">RPG</span></div></div>
+      <div class="game-card" aria-hidden="true"><img src="assets/img/games/dota2.jpg" alt="" loading="lazy"><div class="game-overlay"><span class="go-name">Dota 2</span><span class="go-genre">MOBA</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="container events-grid">
+    <figure class="events-photo">
+      <img src="assets/img/photos/tournament-trophies.jpg" width="582" height="763" loading="lazy" alt="Thunder Gaming Zone FC26 tournament winner trophies">
+      <figcaption>🏆 FC26 Tournament winners · May 2026</figcaption>
+    </figure>
+    <div class="events-copy">
+      <span class="eyebrow">EVENTS &amp; TOURNAMENTS</span>
+      <h2>Compete. Win. Get the trophy.</h2>
+      <p class="events-sub">Tournaments, challenges and special nights — follow us on Instagram to register before slots fill up.</p>
+      <ul class="event-list">
+        <li class="event-item">
+          <div class="event-date"><span class="ev-day">THU</span><span class="ev-mon">WEEKLY</span></div>
+          <div class="event-info">
+            <span class="event-tag">⚡ Weekly</span>
+            <h4>Fun Thursday</h4>
+            <p>9:00 AM – 10:00 PM · Special flat rates on every setup, all day.</p>
+          </div>
+        </li>
+        <li class="event-item">
+          <div class="event-date"><span class="ev-day">8</span><span class="ev-mon">NOV</span></div>
+          <div class="event-info">
+            <span class="event-tag">⚽ Tournament</span>
+            <h4>FC 27 Duo Cup</h4>
+            <p>4:00 PM · Solo &amp; duo entries on PS5. Register via the link in our Instagram bio.</p>
+          </div>
+        </li>
+        <li class="event-item">
+          <div class="event-date"><span class="ev-day">15</span><span class="ev-mon">NOV</span></div>
+          <div class="event-info">
+            <span class="event-tag">🏎️ Time Trial</span>
+            <h4>Wheel Sim Hot Lap Challenge</h4>
+            <p>All day · Set the fastest lap on our Logitech wheel rigs — top 3 win free sim hours.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="events-actions">
+        <a href="https://www.instagram.com/thunder_gamingcafe/" target="_blank" rel="noopener" class="btn btn-primary">Register on Instagram →</a>
+      </div>
+      <p class="events-note">📌 Sample events shown for preview — connect Thunder's own calendar or Instagram posts here to keep this list live.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BIRTHDAY PARTIES -->
+<section class="party" id="parties">
+  <div class="party-bg">
+    <img src="assets/img/photos/birthday-party.jpg" loading="lazy" alt="Kids celebrating a birthday party at Thunder Gaming Zone">
+  </div>
+  <div class="container party-inner">
+    <span class="eyebrow">🎂 BIRTHDAY PARTIES</span>
+    <h2>Level up your birthday at Thunder</h2>
+    <p class="party-sub">We host birthday parties for kids, teens and grown-up gamers — bring the squad, we'll handle the rest.</p>
+    <ul class="party-points">
+      <li>🎮 The whole zone for your group — PS5, RTX PCs, Racing Sim, VR &amp; MetaBat</li>
+      <li>🎈 Party decor and a birthday shout-out on the big screen</li>
+      <li>🏆 Mini tournaments with a trophy for the winner</li>
+      <li>🍟 Chips &amp; cold drinks sorted for everyone</li>
+    </ul>
+    <div class="party-actions">
+      <a href="https://wa.me/919082535250?text=Hi%20Thunder!%20I%27d%20like%20to%20book%20a%20birthday%20party." target="_blank" rel="noopener" class="btn btn-primary btn-lg">Plan a Party on WhatsApp →</a>
+      <a href="tel:+919082535250" class="btn btn-outline btn-lg">📞 Call Us</a>
     </div>
   </div>
 </section>
@@ -266,13 +290,139 @@
   <div class="container">
     <span class="eyebrow center">POWER-UPS</span>
     <h2 class="center">Grab a snack, keep playing</h2>
-    <p class="section-sub center">No kitchen, no waiting — just quick bites and chilled drinks from the counter.</p>
+    <p class="section-sub center">No kitchen, no waiting — pick what you want from the stand and the fridge, and we'll bring it to your seat.</p>
 
-    <div class="snack-grid">
-      <div class="snack-card"><span class="snack-ico">🍟</span><h3>Chips &amp; Crisps</h3><p>Lay's, Kurkure, Doritos &amp; more classic packets.</p></div>
-      <div class="snack-card"><span class="snack-ico">🥤</span><h3>Cold Drinks</h3><p>Chilled Coke, Sprite, Thums Up &amp; Maaza.</p></div>
-      <div class="snack-card"><span class="snack-ico">⚡</span><h3>Energy Drinks</h3><p>Red Bull, Sting &amp; friends for the late-night grind.</p></div>
-      <div class="snack-card"><span class="snack-ico">🍫</span><h3>Chocolates</h3><p>Quick sugar hits between matches.</p></div>
+    <div class="snack-shop">
+      <div class="shop-unit shop-unit--left">
+        <div class="vm vm--snacks">
+          <div class="vm-top"><span class="vm-sign">CHIPS &amp; SNACKS</span></div>
+          <div class="vm-main">
+            <div class="vm-window">
+            <div class="vm-row">
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Lay&#39;s Classic Salted" data-kind="chips" title="Lay&#39;s Classic Salted" style="--c1:#ffd43b" aria-label="Add Lay&#39;s Classic Salted"><img src="assets/img/products/lays-classic.png" alt="Lay&#39;s Classic Salted" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">A1</span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Lay&#39;s Magic Masala" data-kind="chips" title="Lay&#39;s Magic Masala" style="--c1:#339af0" aria-label="Add Lay&#39;s Magic Masala"><img src="assets/img/products/lays-masala.png" alt="Lay&#39;s Magic Masala" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">A2</span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Lay&#39;s Cream &amp; Onion" data-kind="chips" title="Lay&#39;s Cream &amp; Onion" style="--c1:#51cf66" aria-label="Add Lay&#39;s Cream &amp; Onion"><img src="assets/img/products/lays-creamonion.png" alt="Lay&#39;s Cream &amp; Onion" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">A3</span>
+              </div>
+            </div>
+            <div class="vm-row">
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Lay&#39;s Hot &#39;n&#39; Sweet Chilli" data-kind="chips" title="Lay&#39;s Hot &#39;n&#39; Sweet Chilli" style="--c1:#ff922b" aria-label="Add Lay&#39;s Hot &#39;n&#39; Sweet Chilli"><img src="assets/img/products/lays-hotsweet.png" alt="Lay&#39;s Hot &#39;n&#39; Sweet Chilli" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">B1</span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Kurkure Masala Munch" data-kind="chips" title="Kurkure Masala Munch" style="--c1:#ff922b" aria-label="Add Kurkure Masala Munch"><img src="assets/img/products/kurkure.png" alt="Kurkure Masala Munch" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">B2</span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Bingo Mad Angles" data-kind="chips" title="Bingo Mad Angles" style="--c1:#ff6b6b" aria-label="Add Bingo Mad Angles"><img src="assets/img/products/bingo.png" alt="Bingo Mad Angles" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">B3</span>
+              </div>
+            </div>
+            <div class="vm-row">
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Uncle Chipps Spicy Treat" data-kind="chips" title="Uncle Chipps Spicy Treat" style="--c1:#94d82d" aria-label="Add Uncle Chipps Spicy Treat"><img src="assets/img/products/uncle-chipps.png" alt="Uncle Chipps Spicy Treat" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">C1</span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Cornitos Nacho Crisps" data-kind="chips" title="Cornitos Nacho Crisps" style="--c1:#ff4d4d" aria-label="Add Cornitos Nacho Crisps"><img src="assets/img/products/cornitos.png" alt="Cornitos Nacho Crisps" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">C2</span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item packet" data-name="Pringles Original" data-kind="chips" title="Pringles Original" style="--c1:#ff4d4d" aria-label="Add Pringles Original"><img src="assets/img/products/pringles.png" alt="Pringles Original" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-coil"></span><span class="vm-code">C3</span>
+              </div>
+            </div>
+            </div>
+            <div class="vm-panel">
+              <div class="vm-lcd" data-lcd>READY</div>
+              <div class="vm-keypad"><span>A</span><span>B</span><span>C</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>
+              <div class="vm-coin"><span></span></div>
+              <div class="vm-bill"></div>
+            </div>
+          </div>
+          <div class="vm-bottom"><div class="vm-flap">PUSH</div></div>
+          <div class="vm-feet"><span></span><span></span></div>
+        </div>
+      </div>
+
+      <aside class="snack-list" aria-live="polite">
+        <h3>🧾 Your Snack List</h3>
+        <ul id="snackList"></ul>
+        <p class="snack-empty" id="snackEmpty">Tap any packet or drink to add it here.</p>
+        <div class="snack-list-actions" id="snackActions" hidden>
+          <a class="btn btn-primary" id="snackSend" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <button type="button" class="btn btn-outline" id="snackClear">Clear</button>
+        </div>
+        <p class="snack-hint">Show this list at the counter — we'll bring it to your station.</p>
+      </aside>
+
+      <div class="shop-unit shop-unit--right">
+        <div class="vm vm--drinks">
+          <div class="vm-top"><span class="vm-sign">ICE COLD DRINKS</span></div>
+          <div class="vm-main">
+            <div class="vm-window">
+            <div class="vm-row">
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Coca-Cola" data-kind="drink" title="Coca-Cola" style="--c1:#ff4d4d" aria-label="Add Coca-Cola"><img src="assets/img/products/coke-bottle.png" alt="Coca-Cola" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Thums Up" data-kind="drink" title="Thums Up" style="--c1:#4dabf7" aria-label="Add Thums Up"><img src="assets/img/products/thumsup.png" alt="Thums Up" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Sprite" data-kind="drink" title="Sprite" style="--c1:#69db7c" aria-label="Add Sprite"><img src="assets/img/products/sprite.png" alt="Sprite" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+            </div>
+            <div class="vm-row">
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Fanta Orange" data-kind="drink" title="Fanta Orange" style="--c1:#ff922b" aria-label="Add Fanta Orange"><img src="assets/img/products/fanta.png" alt="Fanta Orange" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Pepsi" data-kind="drink" title="Pepsi" style="--c1:#4dabf7" aria-label="Add Pepsi"><img src="assets/img/products/pepsi.png" alt="Pepsi" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Red Bull" data-kind="drink" title="Red Bull" style="--c1:#74c0fc" aria-label="Add Red Bull"><img src="assets/img/products/redbull.png" alt="Red Bull" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+            </div>
+            <div class="vm-row">
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Maaza Mango" data-kind="drink" title="Maaza Mango" style="--c1:#ffd43b" aria-label="Add Maaza Mango"><img src="assets/img/products/maaza.png" alt="Maaza Mango" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Sting Energy" data-kind="drink" title="Sting Energy" style="--c1:#ff4d4d" aria-label="Add Sting Energy"><img src="assets/img/products/sting.png" alt="Sting Energy" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+              <div class="vm-slot">
+                <button type="button" class="snack-item drink" data-name="Bisleri Water" data-kind="drink" title="Bisleri Water" style="--c1:#a5d8ff" aria-label="Add Bisleri Water"><img src="assets/img/products/bisleri.png" alt="Bisleri Water" loading="lazy"><span class="item-count"></span></button>
+                <span class="vm-btn"></span>
+              </div>
+            </div>
+            </div>
+            <div class="vm-panel">
+              <div class="vm-brand">THUNDER</div>
+              <div class="vm-lcd" data-lcd>READY</div>
+              <div class="vm-coin"><span></span></div>
+              <div class="vm-bill"></div>
+            </div>
+          </div>
+          <div class="vm-bottom"><div class="vm-flap">PUSH</div></div>
+          <div class="vm-feet"><span></span><span></span></div>
+        </div>
+      </div>
     </div>
 
     <div class="snack-banner">💧 <span>Drinking water always free · <strong>Ask at the counter</strong> for today's stock &amp; prices</span></div>
@@ -284,15 +434,13 @@
   <div class="container">
     <span class="eyebrow center">GALLERY</span>
     <h2 class="center">A look around Thunder</h2>
+    <!-- Fitted grid: tall photos on both edges, wide + two singles in the middle -->
     <div class="gallery-grid">
-      <img class="g-wide" src="assets/img/maps/wideroom.jpg" alt="Wide view of the blue-lit gaming room with ceiling neon strips">
-      <img class="g-tall" src="assets/img/maps/entrance.jpg" alt="Thunder Gaming Zone entrance with Nintendo Switch, wheel simulator and gaming PC signage">
-      <img class="g-small" src="assets/img/ig/neon-logo.jpg" alt="Glowing Thunder Gaming Zone logo sign">
-      <img class="g-small" src="assets/img/maps/ps5controller.jpg" alt="DualSense controller in hand during a WWE 2K match">
-      <img class="g-small" src="assets/img/maps/pcrow.jpg" alt="Gamers on the RTX PC row">
-      <img class="g-small" src="assets/img/maps/wheelplay.jpg" alt="Racing on the Logitech wheel simulator">
-      <img class="g-wide" src="assets/img/ig/ps5-play.jpg" alt="Friends playing a fighting game on the big screen">
-      <img class="g-wide" src="assets/img/maps/neonsign.jpg" alt="PlayStation symbol neon sign and LED clock">
+      <img class="gg-tall" src="assets/img/photos/gallery-3.jpg" loading="lazy" alt="Young gamer on the RTX PC row with RGB keyboard">
+      <img class="gg-wide gg-screens" src="assets/img/photos/gallery-1.jpg" loading="lazy" alt="Row of glowing gaming screens in the dark">
+      <img class="gg-entrance" src="assets/img/photos/entrance.jpg" loading="lazy" alt="Thunder Gaming Zone entrance with Nintendo Switch, wheel simulator racing and gaming PC signage">
+      <img class="gg-pad" src="assets/img/photos/gallery-2.jpg" loading="lazy" alt="DualSense PS5 controller in hand under neon light">
+      <img class="gg-games" src="assets/img/photos/gallery-5.jpg" loading="lazy" alt="Stack of Nintendo Switch game cases: GTA Trilogy, Assassin's Creed III, Need for Speed, Mario, Zelda">
     </div>
   </div>
 </section>
@@ -300,7 +448,7 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-bg">
-    <img src="assets/img/maps/wideroom.jpg" alt="Thunder Gaming Zone interior with blue neon lighting and big screens">
+    <img src="assets/img/photos/gallery-4.jpg" alt="Packed PS5 lounge at Thunder Gaming Zone watching an FC match on the big screen">
     <div class="about-bg-overlay"></div>
   </div>
   <span class="about-badge">📍 Pandurangwadi, Dombivli East</span>
@@ -334,6 +482,44 @@
         </a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ARCADE: handheld console with the Volt Run mini game -->
+<section class="arcade" id="arcade">
+  <div class="container">
+    <span class="eyebrow center">ARCADE BREAK</span>
+    <h2 class="center">Waiting for your slot? Play a round.</h2>
+    <p class="section-sub center">Help Volt dodge the lag spikes and grab the bolts. Beat the high score, then come beat your friends in person.</p>
+
+    <div class="handheld">
+      <div class="joycon joycon--l">
+        <span class="jc-small jc-minus" aria-hidden="true"></span>
+        <span class="jc-stick" aria-hidden="true"></span>
+        <div class="jc-dpad">
+          <button type="button" class="jc-btn jc-up" data-runner="jump" aria-label="Jump">▲</button>
+          <span class="jc-btn jc-left" aria-hidden="true">◀</span>
+          <span class="jc-btn jc-right" aria-hidden="true">▶</span>
+          <span class="jc-btn jc-down" aria-hidden="true">▼</span>
+        </div>
+        <span class="jc-small jc-capture" aria-hidden="true"></span>
+      </div>
+      <div class="handheld-screen">
+        <canvas id="runnerCanvas" width="640" height="300" aria-label="Volt Run mini game. Press Space, up arrow or tap to jump."></canvas>
+      </div>
+      <div class="joycon joycon--r">
+        <span class="jc-small jc-plus" aria-hidden="true"></span>
+        <div class="jc-abxy">
+          <span class="jc-btn jc-x" aria-hidden="true">X</span>
+          <span class="jc-btn jc-y" aria-hidden="true">Y</span>
+          <button type="button" class="jc-btn jc-a" data-runner="jump" aria-label="Jump (A)">A</button>
+          <span class="jc-btn jc-b" aria-hidden="true">B</span>
+        </div>
+        <span class="jc-stick" aria-hidden="true"></span>
+        <span class="jc-small jc-home" aria-hidden="true"></span>
+      </div>
+    </div>
+    <p class="arcade-help center">Jump with <kbd>Space</kbd> / <kbd>↑</kbd>, tap the screen, or press <b>A</b>.</p>
   </div>
 </section>
 
@@ -432,5 +618,6 @@
 </footer>
 
 <script src="assets/script.js"></script>
+<script src="assets/runner.js"></script>
 </body>
 </html>

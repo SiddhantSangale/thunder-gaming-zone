@@ -34,6 +34,72 @@ if (eventsBtn && eventsModal && eventsClose) {
   });
 }
 
+// Snack shop — click packets / drinks to build a list; it can be sent to the counter on WhatsApp
+const snackListEl = document.getElementById('snackList');
+if (snackListEl) {
+  const emptyEl = document.getElementById('snackEmpty');
+  const actionsEl = document.getElementById('snackActions');
+  const sendEl = document.getElementById('snackSend');
+  const items = document.querySelectorAll('.snack-item');
+  const order = new Map(); // name -> qty, in the order items were first added
+
+  const decode = (s) => { const t = document.createElement('textarea'); t.innerHTML = s; return t.value; };
+
+  function render() {
+    snackListEl.innerHTML = '';
+    order.forEach((qty, name) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span class="sl-name"></span>
+        <button type="button" class="sl-btn" data-act="dec" aria-label="One less">−</button>
+        <span class="sl-qty">${qty}</span>
+        <button type="button" class="sl-btn" data-act="inc" aria-label="One more">+</button>
+        <button type="button" class="sl-btn" data-act="del" aria-label="Remove">✕</button>`;
+      li.querySelector('.sl-name').textContent = name;
+      li.dataset.name = name;
+      snackListEl.appendChild(li);
+    });
+    const hasItems = order.size > 0;
+    emptyEl.hidden = hasItems;
+    actionsEl.hidden = !hasItems;
+
+    items.forEach(btn => {
+      const qty = order.get(decode(btn.dataset.name)) || 0;
+      btn.classList.toggle('in-list', qty > 0);
+      btn.querySelector('.item-count').textContent = qty || '';
+    });
+
+    const total = [...order.values()].reduce((sum, q) => sum + q, 0);
+    document.querySelectorAll('[data-lcd]').forEach(l => { l.textContent = total ? `${total} IN LIST` : 'READY'; });
+
+    const text = 'Hi Thunder! Snack order:\n' + [...order].map(([n, q]) => `• ${n} × ${q}`).join('\n');
+    sendEl.href = 'https://wa.me/919082535250?text=' + encodeURIComponent(text);
+  }
+
+  items.forEach(btn => btn.addEventListener('click', () => {
+    const name = decode(btn.dataset.name);
+    order.set(name, (order.get(name) || 0) + 1);
+    btn.classList.remove('added');
+    void btn.offsetWidth; // restart the pop animation
+    btn.classList.add('added');
+    render();
+  }));
+
+  snackListEl.addEventListener('click', (e) => {
+    const b = e.target.closest('.sl-btn');
+    if (!b) return;
+    const name = b.closest('li').dataset.name;
+    const qty = order.get(name);
+    if (b.dataset.act === 'inc') order.set(name, qty + 1);
+    else if (b.dataset.act === 'dec' && qty > 1) order.set(name, qty - 1);
+    else order.delete(name);
+    render();
+  });
+
+  document.getElementById('snackClear').addEventListener('click', () => { order.clear(); render(); });
+  render();
+}
+
 // Loading intro — a forked lightning strike from the sky into the gap between THU and DER,
 // where the logo's bolt lands; then Tesla arcs crackle off the letters. CSS handles the logo bolt,
 // letters and blackout.
