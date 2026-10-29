@@ -67,7 +67,7 @@
   </div>
   <div class="container hero-content">
     <p class="tagline">Feel the Thunder.<br><em>Own Every Game.</em></p>
-    <p class="hero-sub">PS5 · RTX PCs · Racing Sim · VR &amp; MetaBat — Dombivli East</p>
+    <p class="hero-sub">PS5 · RTX PCs · Racing Sim · VR &amp; MetaBat</p>
     <div class="hero-actions">
       <a href="#stations" class="btn btn-outline btn-lg">Explore Setups</a>
       <a href="booking.html" class="btn btn-primary btn-lg">Book Your Slot →</a>
@@ -221,16 +221,16 @@
 <!-- EVENTS -->
 <section class="events" id="events">
   <div class="container events-grid">
-    <figure class="events-photo">
+    <figure class="events-photo reveal reveal--left">
       <img src="assets/img/photos/tournament-trophies.jpg" width="582" height="763" loading="lazy" alt="Thunder Gaming Zone FC26 tournament winner trophies">
       <figcaption>🏆 FC26 Tournament winners · May 2026</figcaption>
     </figure>
     <div class="events-copy">
-      <span class="eyebrow">EVENTS &amp; TOURNAMENTS</span>
-      <h2>Compete. Win. Get the trophy.</h2>
-      <p class="events-sub">Tournaments, challenges and special nights — follow us on Instagram to register before slots fill up.</p>
+      <span class="eyebrow reveal reveal--up">EVENTS &amp; TOURNAMENTS</span>
+      <h2 class="reveal reveal--up">Compete. Win. Get the trophy.</h2>
+      <p class="events-sub reveal reveal--up">Tournaments, challenges and special nights — follow us on Instagram to register before slots fill up.</p>
       <ul class="event-list">
-        <li class="event-item">
+        <li class="event-item reveal reveal--right" style="--i:1">
           <div class="event-date"><span class="ev-day">THU</span><span class="ev-mon">WEEKLY</span></div>
           <div class="event-info">
             <span class="event-tag">⚡ Weekly</span>
@@ -238,7 +238,7 @@
             <p>9:00 AM – 10:00 PM · Special flat rates on every setup, all day.</p>
           </div>
         </li>
-        <li class="event-item">
+        <li class="event-item reveal reveal--right" style="--i:2">
           <div class="event-date"><span class="ev-day">8</span><span class="ev-mon">NOV</span></div>
           <div class="event-info">
             <span class="event-tag">⚽ Tournament</span>
@@ -246,7 +246,7 @@
             <p>4:00 PM · Solo &amp; duo entries on PS5. Register via the link in our Instagram bio.</p>
           </div>
         </li>
-        <li class="event-item">
+        <li class="event-item reveal reveal--right" style="--i:3">
           <div class="event-date"><span class="ev-day">15</span><span class="ev-mon">NOV</span></div>
           <div class="event-info">
             <span class="event-tag">🏎️ Time Trial</span>
@@ -255,7 +255,7 @@
           </div>
         </li>
       </ul>
-      <div class="events-actions">
+      <div class="events-actions reveal reveal--up">
         <a href="https://www.instagram.com/thunder_gamingcafe/" target="_blank" rel="noopener" class="btn btn-primary">Register on Instagram →</a>
       </div>
       <p class="events-note">📌 Sample events shown for preview — connect Thunder's own calendar or Instagram posts here to keep this list live.</p>
@@ -429,18 +429,55 @@
   </div>
 </section>
 
+<!-- ARCADE: handheld console with the Volt Run mini game -->
+<section class="arcade" id="arcade">
+  <div class="container">
+    <span class="eyebrow center">ARCADE BREAK</span>
+    <h2 class="center">Waiting for your slot? Play a round.</h2>
+    <p class="section-sub center">Help Volt dodge the lag spikes and grab the bolts. Beat the high score, then come beat your friends in person.</p>
+
+    <div class="handheld">
+      <div class="joycon joycon--l">
+        <span class="jc-small jc-minus" aria-hidden="true"></span>
+        <span class="jc-stick" aria-hidden="true"></span>
+        <div class="jc-dpad">
+          <button type="button" class="jc-btn jc-up" data-runner="jump" aria-label="Jump">▲</button>
+          <span class="jc-btn jc-left" aria-hidden="true">◀</span>
+          <span class="jc-btn jc-right" aria-hidden="true">▶</span>
+          <span class="jc-btn jc-down" aria-hidden="true">▼</span>
+        </div>
+        <span class="jc-small jc-capture" aria-hidden="true"></span>
+      </div>
+      <div class="handheld-screen">
+        <canvas id="runnerCanvas" width="640" height="300" aria-label="Volt Run mini game. Press Space, up arrow or tap to jump."></canvas>
+      </div>
+      <div class="joycon joycon--r">
+        <span class="jc-small jc-plus" aria-hidden="true"></span>
+        <div class="jc-abxy">
+          <span class="jc-btn jc-x" aria-hidden="true">X</span>
+          <span class="jc-btn jc-y" aria-hidden="true">Y</span>
+          <button type="button" class="jc-btn jc-a" data-runner="jump" aria-label="Jump (A)">A</button>
+          <span class="jc-btn jc-b" aria-hidden="true">B</span>
+        </div>
+        <span class="jc-stick" aria-hidden="true"></span>
+        <span class="jc-small jc-home" aria-hidden="true"></span>
+      </div>
+    </div>
+    <p class="arcade-help center">Jump with <kbd>Space</kbd> / <kbd>↑</kbd>, tap the screen, or press <b>A</b>.</p>
+  </div>
+</section>
+
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="container">
     <span class="eyebrow center">GALLERY</span>
     <h2 class="center">A look around Thunder</h2>
-    <!-- Fitted grid: tall photos on both edges, wide + two singles in the middle -->
+    <!-- Fitted grid: tall photos on both edges, two wide photos stacked in the middle -->
     <div class="gallery-grid">
-      <img class="gg-tall" src="assets/img/photos/gallery-3.jpg" loading="lazy" alt="Young gamer on the RTX PC row with RGB keyboard">
+      <img class="gg-tall" src="assets/img/photos/entrance.jpg" loading="lazy" alt="Thunder Gaming Zone entrance with Nintendo Switch, wheel simulator racing and gaming PC signage">
       <img class="gg-wide gg-screens" src="assets/img/photos/gallery-1.jpg" loading="lazy" alt="Row of glowing gaming screens in the dark">
-      <img class="gg-entrance" src="assets/img/photos/entrance.jpg" loading="lazy" alt="Thunder Gaming Zone entrance with Nintendo Switch, wheel simulator racing and gaming PC signage">
-      <img class="gg-pad" src="assets/img/photos/gallery-2.jpg" loading="lazy" alt="DualSense PS5 controller in hand under neon light">
-      <img class="gg-games" src="assets/img/photos/gallery-5.jpg" loading="lazy" alt="Stack of Nintendo Switch game cases: GTA Trilogy, Assassin's Creed III, Need for Speed, Mario, Zelda">
+      <img class="gg-entrance" src="assets/img/photos/gallery-3.jpg" loading="lazy" alt="Young gamer on the RTX PC row with RGB keyboard">
+      <img class="gg-wide gg-games" src="assets/img/photos/gallery-5.jpg" loading="lazy" alt="Stack of Nintendo Switch game cases: GTA Trilogy, Assassin's Creed III, Need for Speed, Mario, Zelda">
     </div>
   </div>
 </section>
@@ -482,44 +519,6 @@
         </a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ARCADE: handheld console with the Volt Run mini game -->
-<section class="arcade" id="arcade">
-  <div class="container">
-    <span class="eyebrow center">ARCADE BREAK</span>
-    <h2 class="center">Waiting for your slot? Play a round.</h2>
-    <p class="section-sub center">Help Volt dodge the lag spikes and grab the bolts. Beat the high score, then come beat your friends in person.</p>
-
-    <div class="handheld">
-      <div class="joycon joycon--l">
-        <span class="jc-small jc-minus" aria-hidden="true"></span>
-        <span class="jc-stick" aria-hidden="true"></span>
-        <div class="jc-dpad">
-          <button type="button" class="jc-btn jc-up" data-runner="jump" aria-label="Jump">▲</button>
-          <span class="jc-btn jc-left" aria-hidden="true">◀</span>
-          <span class="jc-btn jc-right" aria-hidden="true">▶</span>
-          <span class="jc-btn jc-down" aria-hidden="true">▼</span>
-        </div>
-        <span class="jc-small jc-capture" aria-hidden="true"></span>
-      </div>
-      <div class="handheld-screen">
-        <canvas id="runnerCanvas" width="640" height="300" aria-label="Volt Run mini game. Press Space, up arrow or tap to jump."></canvas>
-      </div>
-      <div class="joycon joycon--r">
-        <span class="jc-small jc-plus" aria-hidden="true"></span>
-        <div class="jc-abxy">
-          <span class="jc-btn jc-x" aria-hidden="true">X</span>
-          <span class="jc-btn jc-y" aria-hidden="true">Y</span>
-          <button type="button" class="jc-btn jc-a" data-runner="jump" aria-label="Jump (A)">A</button>
-          <span class="jc-btn jc-b" aria-hidden="true">B</span>
-        </div>
-        <span class="jc-stick" aria-hidden="true"></span>
-        <span class="jc-small jc-home" aria-hidden="true"></span>
-      </div>
-    </div>
-    <p class="arcade-help center">Jump with <kbd>Space</kbd> / <kbd>↑</kbd>, tap the screen, or press <b>A</b>.</p>
   </div>
 </section>
 

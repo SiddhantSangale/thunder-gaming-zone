@@ -34,6 +34,28 @@ if (eventsBtn && eventsModal && eventsClose) {
   });
 }
 
+// Scroll reveal: elements with .reveal animate in when they enter the viewport
+const revealEls = document.querySelectorAll('.reveal');
+if (revealEls.length) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  revealEls.forEach(el => io.observe(el));
+}
+
+// Gentle parallax on the Events trophies photo while it is on screen
+const eventsPhoto = document.querySelector('.events-photo');
+if (eventsPhoto && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const onScroll = () => {
+    const r = eventsPhoto.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > innerHeight) return;
+    const progress = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;  // -1..1 around screen centre
+    eventsPhoto.style.setProperty('--parallax', `${(progress * -24).toFixed(1)}px`);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
 // Snack shop — click packets / drinks to build a list; it can be sent to the counter on WhatsApp
 const snackListEl = document.getElementById('snackList');
 if (snackListEl) {
@@ -254,7 +276,8 @@ if (intro) {
   if (!reduceMotion) {
     const start = performance.now();
     const g0 = gapBox();
-    const skyX = g0.cx + rand(-innerWidth * 0.15, innerWidth * 0.15);
+    // the strike always enters from the top-right and angles down into the gap
+    const skyX = Math.min(innerWidth - 20, g0.cx + innerWidth * rand(0.22, 0.34));
     let strike = bolt(skyX, -40, g0.cx, g0.bottom, 3.4, [6, 2, 1]);
     let arcs = [], lastArcs = 0;
 
