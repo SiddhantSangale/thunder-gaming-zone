@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Thunder Gaming Zone</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="site-header" id="header">
+  <div class="container nav-inner">
+    <a href="index.html#home" class="logo"><img src="assets/img/logo.png" alt="Thunder Gaming Zone logo"><span class="logo-text">THUNDER<em>ZONE</em></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home">Home</a>
+      <a href="booking.html">Book a Slot</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="admin-badge">🔒 Admin</span>
+      <button type="button" id="logoutBtn" class="btn btn-ghost" style="display:none;">Log Out</button>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- LOGIN -->
+<section class="admin-login-wrap" id="loginWrap">
+  <div class="admin-login-card">
+    <span class="eyebrow center">STAFF ONLY</span>
+    <h2 class="center">Admin Sign In</h2>
+    <div class="bk-field">
+      <label for="adminUser">Username</label>
+      <input type="text" id="adminUser" autocomplete="username" placeholder="admin">
+    </div>
+    <div class="bk-field">
+      <label for="adminPass">Password</label>
+      <input type="password" id="adminPass" autocomplete="current-password" placeholder="••••••••">
+    </div>
+    <p class="bk-error" id="loginError"></p>
+    <button type="button" id="loginBtn" class="btn btn-primary btn-lg" style="width:100%;">Sign In</button>
+    <p class="summary-note center">Demo login — username <strong>admin</strong>, password <strong>thunder2026</strong>. Client-side only; wire up real authentication before going live.</p>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="admin-dashboard" id="dashboard" style="display:none;">
+  <div class="container">
+    <div class="admin-topbar">
+      <div>
+        <span class="eyebrow">DASHBOARD</span>
+        <h2>Bookings overview</h2>
+      </div>
+      <div class="admin-filter">
+        <label for="filterDate">Date</label>
+        <input type="date" id="filterDate">
+        <button type="button" id="allDatesBtn" class="btn btn-outline">All dates</button>
+      </div>
+    </div>
+
+    <div class="admin-stats" id="adminStats"></div>
+
+    <div class="admin-slots">
+      <div class="admin-slot-block">
+        <h3>🎮 PS5 Lounge <small id="ps5Occ"></small></h3>
+        <div class="seat-grid" id="ps5SlotGrid"></div>
+      </div>
+      <div class="admin-slot-block">
+        <h3>🖥️ RTX 4060 PC <small id="pcOcc"></small></h3>
+        <div class="seat-grid" id="pcSlotGrid"></div>
+      </div>
+      <div class="admin-slot-block">
+        <h3>🏎️ Racing Simulator <small id="simOcc"></small></h3>
+        <div class="seat-grid" id="simSlotGrid"></div>
+      </div>
+      <div class="admin-slot-block">
+        <h3>🥽 VR &amp; MetaBat <small id="vrOcc"></small></h3>
+        <div class="seat-grid" id="vrSlotGrid"></div>
+      </div>
+    </div>
+
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Booking ID</th><th>Date</th><th>Time</th><th>Setup</th><th>Station</th>
+            <th>Duration</th><th>Players</th><th>Name</th><th>Phone</th><th>Total</th><th></th>
+          </tr>
+        </thead>
+        <tbody id="bookingsBody"></tbody>
+      </table>
+      <p class="seat-hint" id="noBookings" style="display:none;">No bookings for this date.</p>
+    </div>
+
+    <button type="button" id="clearAllBtn" class="btn btn-outline admin-clear-btn">Clear all demo bookings</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="index.html#home" class="logo"><img src="assets/img/logo.png" alt="Thunder Gaming Zone logo"><span class="logo-text">THUNDER<em>ZONE</em></span></a>
+    <p>PS5 · RTX PCs · Racing Sim · VR &amp; MetaBat — Dombivli East</p>
+        <p class="copyright">© <span id="year"></span> Thunder Gaming Zone. Prototype site — all rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/booking-data.js"></script>
+<script src="assets/script.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

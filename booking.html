@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Slot | Thunder Gaming Zone</title>
+<meta name="description" content="Book a PS5, RTX PC, racing sim or VR slot at Thunder Gaming Zone, Dombivli East. Pick your date, time & station in seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="site-header" id="header">
+  <div class="container nav-inner">
+    <a href="index.html#home" class="logo"><img src="assets/img/logo.png" alt="Thunder Gaming Zone logo"><span class="logo-text">THUNDER<em>ZONE</em></span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#stations">Experiences</a>
+      <a href="index.html#offers">Offers</a>
+      <a href="index.html#snacks">Snacks</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#visit">Visit Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+919082535250" class="btn btn-ghost">📞 Call</a>
+      <a href="booking.html" class="btn btn-primary">Book Now</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow center">BOOK A SLOT</span>
+    <h1 class="center">Reserve your battle station</h1>
+    <p class="section-sub center">Pick a date, time & seat — we'll have your station ready when you walk in.</p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking">
+  <div class="container">
+    <div class="booking-grid">
+
+      <div class="booking-form-col">
+
+        <!-- Step 1: Date -->
+        <div class="bk-step">
+          <span class="bk-step-label"><span class="bk-num">1</span> Choose a date</span>
+          <input type="date" id="bkDate" class="bk-date-input">
+        </div>
+
+        <!-- Step 2: Type -->
+        <div class="bk-step">
+          <span class="bk-step-label"><span class="bk-num">2</span> Choose your setup</span>
+          <div class="type-tabs" id="typeTabs">
+            <button type="button" class="type-tab active" data-type="ps5">🎮 PS5 Lounge <small>4 stations</small></button>
+            <button type="button" class="type-tab" data-type="pc">🖥️ RTX 4060 PC <small>6 stations</small></button>
+            <button type="button" class="type-tab" data-type="sim">🏎️ Racing Simulator <small>2 rigs</small></button>
+            <button type="button" class="type-tab" data-type="vr">🥽 VR &amp; MetaBat <small>1 bay</small></button>
+          </div>
+        </div>
+
+        <!-- Step 3: Time -->
+        <div class="bk-step">
+          <span class="bk-step-label"><span class="bk-num">3</span> Choose a start time</span>
+          <div class="time-slots" id="timeSlots"></div>
+        </div>
+
+        <!-- Step 4: Duration -->
+        <div class="bk-step">
+          <span class="bk-step-label"><span class="bk-num">4</span> Duration</span>
+          <div class="duration-stepper">
+            <button type="button" id="durMinus" class="dur-btn" aria-label="Decrease duration">−</button>
+            <span class="dur-value" id="durValue">1 hr</span>
+            <button type="button" id="durPlus" class="dur-btn" aria-label="Increase duration">+</button>
+          </div>
+        </div>
+
+        <!-- Step 5: Seat -->
+        <div class="bk-step">
+          <span class="bk-step-label"><span class="bk-num">5</span> Pick your station</span>
+          <div class="seat-grid" id="seatGrid"></div>
+          <div class="seat-legend">
+            <span><i class="seat-dot available"></i> Available</span>
+            <span><i class="seat-dot selected"></i> Selected</span>
+            <span><i class="seat-dot booked"></i> Booked</span>
+          </div>
+        </div>
+
+        <!-- Step 6: Players (PS5 only) -->
+        <div class="bk-step" id="playersStep">
+          <span class="bk-step-label"><span class="bk-num">6</span> Number of players</span>
+          <div class="duration-stepper">
+            <button type="button" id="playersMinus" class="dur-btn" aria-label="Decrease players">−</button>
+            <span class="dur-value" id="playersValue">1</span>
+            <button type="button" id="playersPlus" class="dur-btn" aria-label="Increase players">+</button>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="bk-step">
+          <span class="bk-step-label"><span class="bk-num">7</span> Your details</span>
+          <div class="bk-form-fields">
+            <div class="bk-field">
+              <label for="bkName">Name</label>
+              <input type="text" id="bkName" placeholder="Your name" autocomplete="name">
+            </div>
+            <div class="bk-field">
+              <label for="bkPhone">Phone number</label>
+              <input type="tel" id="bkPhone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" maxlength="10">
+            </div>
+          </div>
+        </div>
+
+        <p class="bk-error" id="bkError"></p>
+      </div>
+
+      <!-- Summary -->
+      <aside class="booking-summary">
+        <h3>Booking Summary</h3>
+        <ul class="summary-list" id="summaryList">
+          <li><span>Setup</span><strong id="sumType">PS5 Lounge</strong></li>
+          <li><span>Date</span><strong id="sumDate">—</strong></li>
+          <li><span>Time</span><strong id="sumTime">—</strong></li>
+          <li><span>Duration</span><strong id="sumDuration">1 hr</strong></li>
+          <li><span>Station</span><strong id="sumSeat">—</strong></li>
+          <li><span>Players</span><strong id="sumPlayers">1</strong></li>
+        </ul>
+        <div class="summary-total">
+          <span>Estimated total</span>
+          <strong id="sumTotal">₹0</strong>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg summary-confirm" id="confirmBtn">Confirm Booking</button>
+        <p class="summary-note">* Rates shown are indicative (based on Thunder's posted offer prices) — final price confirmed at the counter. This is a demo booking system; bookings are stored in this browser only.</p>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONFIRMATION MODAL -->
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal-box confirm-box">
+    <div class="modal-head">
+      <h3>✅ Booking Confirmed</h3>
+      <button type="button" id="confirmClose" class="modal-close" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body confirm-body">
+      <p class="confirm-ref">Booking ID: <strong id="confirmRef"></strong></p>
+      <ul class="summary-list" id="confirmSummary"></ul>
+      <p class="confirm-msg">Show this booking ID at the counter when you arrive. See you at Thunder! ⚡</p>
+    </div>
+    <div class="confirm-actions">
+      <button type="button" class="btn btn-primary" id="confirmDone">Book Another Slot</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="index.html#home" class="logo"><img src="assets/img/logo.png" alt="Thunder Gaming Zone logo"><span class="logo-text">THUNDER<em>ZONE</em></span></a>
+    <p>PS5 · RTX PCs · Racing Sim · VR &amp; MetaBat — Dombivli East</p>
+    <div class="footer-links">
+      <a href="tel:+919082535250">090825 35250</a>
+      <a href="https://www.instagram.com/thunder_gamingcafe/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.google.com/maps/place/Thunder+Gaming+Cafe/@19.2097234,73.0913466,354m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be79584dae21099:0x76527ccf8c31e28e!8m2!3d19.2097234!4d73.0920707!16s%2Fg%2F11wg5w4zh5" target="_blank" rel="noopener">Google Maps</a>
+      <a href="admin.html">Admin</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Thunder Gaming Zone. Prototype site — all rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/booking-data.js"></script>
+<script src="assets/script.js"></script>
+<script src="assets/booking.js"></script>
+</body>
+</html>
