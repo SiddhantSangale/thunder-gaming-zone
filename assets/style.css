@@ -661,13 +661,12 @@ h3{ font-size:1.25rem; margin-bottom:8px; }
 }
 
 /* ===== Thunder Gaming Zone additions ===== */
-.logo img{ mix-blend-mode:normal; height:50px; filter:drop-shadow(0 0 10px rgba(30,200,255,.35)); }
+.logo img{ mix-blend-mode:normal; height:58px; filter:drop-shadow(0 0 10px rgba(30,200,255,.3)); }
 .tagline .bolt{ color:var(--neon-pink); -webkit-text-fill-color:var(--neon-pink); text-shadow:0 0 18px rgba(255,210,63,.7); }
-.hero-badge{
-  display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(30,200,255,.4); background:rgba(6,9,18,.6);
-  color:var(--text); padding:8px 18px; border-radius:999px; font-size:.85rem; font-weight:700; letter-spacing:.04em;
+.hero-sub{
+  margin-top:16px; font-size:clamp(.95rem, 2vw, 1.15rem); font-weight:700; letter-spacing:.08em; color:#cfe3f5;
+  text-shadow:0 2px 10px rgba(0,0,0,.9);
 }
-.hero-badge b{ color:#ffd23f; }
 .deco-bolt{ filter:drop-shadow(0 0 8px #ffd23f) drop-shadow(0 0 16px #ffd23f); }
 .deco-bolt.b1{ top:30%; left:16%; width:34px; height:34px; --tilt:12deg; animation:deco-float 5.2s ease-in-out infinite .3s; }
 .deco-bolt.b2{ bottom:28%; right:20%; width:30px; height:30px; --tilt:-14deg; animation:deco-float 6.2s ease-in-out infinite 1.2s; }
@@ -716,6 +715,82 @@ h3{ font-size:1.25rem; margin-bottom:8px; }
   .container{ padding:0 16px; }
   .snack-grid{ gap:12px; }
   .hero-actions .btn-lg{ padding:14px 22px; }
-  .logo-text{ display:none; }
+  .logo img{ height:38px; }
   .tagline{ font-size:1.55rem; }
+}
+
+/* ===== Loading intro: lightning strike → metallic THU / DER → blackout ===== */
+body.intro-active{ overflow:hidden; }
+.intro{
+  position:fixed; inset:0; z-index:1000; background:#000; display:grid; place-items:center; overflow:hidden;
+  animation:intro-out .5s ease 3.4s forwards;
+}
+.intro.done{ display:none; }
+@keyframes intro-out{ to{ opacity:0; visibility:hidden; } }
+.intro-canvas{
+  position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:1;
+  filter:drop-shadow(0 0 4px rgba(150,210,255,.9)) drop-shadow(0 0 16px rgba(100,110,255,.75));
+}
+.intro-flash{
+  position:absolute; inset:0; opacity:0; pointer-events:none; z-index:2;
+  background:radial-gradient(circle at 50% 50%, rgba(225,245,255,.95), rgba(30,200,255,.3) 35%, transparent 70%);
+  animation:intro-flash .8s ease-out .32s;
+}
+@keyframes intro-flash{ 0%{opacity:0} 6%{opacity:1} 16%{opacity:.15} 26%{opacity:.8} 45%,100%{opacity:0} }
+.intro-stage{
+  position:relative; z-index:3; display:flex; align-items:center; justify-content:center; perspective:600px;
+  font-family:var(--font-head); font-weight:900; font-size:clamp(2.6rem, 13vw, 7.5rem); line-height:1;
+  animation:intro-blackout .45s ease-in 2.85s forwards;
+}
+@keyframes intro-blackout{ to{ opacity:0; transform:scale(.96); filter:brightness(0); } }
+
+/* Letters rise from behind the bolt — brushed steel with a moving shine */
+.intro-word{ position:relative; display:inline-block; opacity:0; }
+.intro-thu{ --from:40%; animation:intro-emerge .75s cubic-bezier(.16,.9,.3,1.1) 1.0s forwards; }
+.intro-der{ --from:-40%; animation:intro-emerge .75s cubic-bezier(.16,.9,.3,1.1) 1.0s forwards; }
+@keyframes intro-emerge{
+  0%{ opacity:0; transform:translateX(var(--from)) translateZ(-500px) skewX(-14deg); filter:blur(12px) brightness(3); }
+  45%{ opacity:1; }
+  100%{ opacity:1; transform:translateX(0) translateZ(0) skewX(-14deg); filter:blur(0) brightness(1); }
+}
+.intro-metal{
+  display:inline-block; letter-spacing:.02em; color:transparent;
+  background:
+    linear-gradient(105deg, transparent 35%, rgba(255,255,255,.95) 50%, transparent 65%) -150% 0 / 250% 100% no-repeat,
+    linear-gradient(180deg, #ffffff 0%, #dfe7f0 18%, #95a3b5 42%, #f5f9ff 50%, #6f7d8f 66%, #b9c6d6 84%, #eef3f8 100%);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-stroke:1px rgba(150,215,255,.55);
+  filter:drop-shadow(0 0 4px rgba(120,210,255,.9)) drop-shadow(0 0 20px rgba(30,150,255,.55));
+  animation:intro-shine 1s ease-in-out 1.7s forwards;
+}
+@keyframes intro-shine{ to{ background-position:250% 0, 0 0; } }
+.intro-der small{
+  position:absolute; right:0; top:100%; margin-top:.35em; white-space:nowrap;
+  font-size:.17em; letter-spacing:.22em; color:#cfe9ff; opacity:0;
+  animation:intro-fade .4s ease 1.8s forwards;
+}
+@keyframes intro-fade{ to{ opacity:1; } }
+
+/* Gap between THU and DER — the canvas lightning lives here */
+.intro-gap{ display:inline-block; width:.7em; height:1.65em; }
+.intro-bolt{
+  display:block; width:100%; height:100%; overflow:visible; opacity:0; transform-origin:50% 100%;
+  filter:drop-shadow(0 0 10px rgba(200,240,255,.9)) drop-shadow(0 0 28px rgba(30,200,255,.8));
+  animation:intro-bolt-land .3s cubic-bezier(.2,1.4,.4,1) .38s forwards, intro-bolt-pulse .5s ease 1.6s;
+}
+.intro-bolt path{ fill:#fff; stroke:#fff; stroke-width:3; stroke-linejoin:round; }
+@keyframes intro-bolt-land{ 0%{ opacity:0; transform:scale(.4, 1.5); } 100%{ opacity:1; transform:none; } }
+@keyframes intro-bolt-pulse{ 40%{ filter:drop-shadow(0 0 18px #fff) drop-shadow(0 0 48px rgba(30,200,255,1)); } }
+
+.intro-skip{
+  position:absolute; z-index:4; right:20px; bottom:20px; background:none; border:1px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.55); font-family:var(--font-body); font-weight:600; font-size:.8rem; letter-spacing:.12em;
+  text-transform:uppercase; padding:6px 14px; border-radius:999px; cursor:pointer;
+}
+.intro-skip:hover{ color:#fff; border-color:rgba(255,255,255,.5); }
+@media (prefers-reduced-motion: reduce){
+  .intro{ animation-delay:.9s; }
+  .intro *{ animation-duration:.01s !important; animation-delay:0s !important; }
+  .intro-stage{ animation:none; }
+  .intro-canvas{ display:none; }
 }

@@ -11,12 +11,26 @@
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
-<body>
+<body class="intro-active">
+
+<!-- INTRO: lightning strikes from the sky → metallic THU / DER rise around the logo bolt → blackout → site -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-flash"></div>
+  <canvas class="intro-canvas" id="introCanvas"></canvas>
+  <div class="intro-stage">
+    <span class="intro-word intro-thu" id="introThu"><span class="intro-metal">THU</span></span>
+    <span class="intro-gap" id="introGap">
+      <svg class="intro-bolt" viewBox="0 0 60 160"><path d="M40 2 L8 94 L29 89 L17 158 L53 60 L32 66 Z"/></svg>
+    </span>
+    <span class="intro-word intro-der" id="introDer"><span class="intro-metal">DER</span><small>THE GAMING ZONE</small></span>
+  </div>
+  <button type="button" class="intro-skip" id="introSkip">Skip</button>
+</div>
 
 <!-- NAV -->
 <header class="site-header" id="header">
   <div class="container nav-inner">
-    <a href="#home" class="logo"><img src="assets/img/logo.png" alt="Thunder Gaming Zone logo"><span class="logo-text">THUNDER<em>ZONE</em></span></a>
+    <a href="#home" class="logo"><img src="assets/img/header-logo.png" alt="Thunder Gaming Zone"></a>
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#stations">Experiences</a>
@@ -51,8 +65,8 @@
     <svg class="deco-btn deco-bolt b2" viewBox="0 0 40 40"><path d="M23 4 L10 22 H19 L16 36 L30 16 H21 Z" fill="none" stroke="#ffd23f" stroke-width="2.6" stroke-linejoin="round"/></svg>
   </div>
   <div class="container hero-content">
-    <span class="hero-badge"><b>★ 4.9</b> on Google · 227+ gamers</span>
-    <p class="tagline">Dombivli East's<br>Loudest <span class="bolt">⚡</span> Gaming Zone<br><em>PS5 · PC · Sim · VR.</em></p>
+    <p class="tagline">Feel the <span class="bolt">⚡</span> Thunder.<br><em>Own Every Game.</em></p>
+    <p class="hero-sub">PS5 · RTX PCs · Racing Sim · VR &amp; MetaBat — Dombivli East</p>
     <div class="hero-actions">
       <a href="#stations" class="btn btn-outline btn-lg">Explore Setups</a>
       <a href="booking.html" class="btn btn-primary btn-lg">Book Your Slot →</a>
@@ -405,7 +419,7 @@
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <a href="#home" class="logo"><img src="assets/img/logo.png" alt="Thunder Gaming Zone logo"><span class="logo-text">THUNDER<em>ZONE</em></span></a>
+    <a href="#home" class="logo"><img src="assets/img/header-logo.png" alt="Thunder Gaming Zone"></a>
     <p>PS5 · RTX PCs · Racing Sim · VR &amp; MetaBat — Dombivli East</p>
     <div class="footer-links">
       <a href="tel:+919082535250">090825 35250</a>
